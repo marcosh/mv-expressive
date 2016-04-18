@@ -56,7 +56,16 @@ $formatter = function (
 $accessLog = new AccessLog($logger, $formatter);
 
 return [
+    'dependencies' => [
+        'factories' => [
+            React2Psr7\StaticFiles::class => React2Psr7\StaticFilesFactory::class,
+        ]
+    ],
     'middleware_pipeline' => [
+        'static' => [
+            'middleware' => React2Psr7\StaticFiles::class,
+            'priority' => 100000, // Execute earliest!
+        ],
         'basic_authentication' => [
             'middleware' => $basicAuthentication,
             'priority' => 4000

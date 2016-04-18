@@ -27,7 +27,9 @@
         "zendframework/zend-expressive-twigrenderer": "^1.0",
         "oscarotero/psr7-middlewares": "^3.14",
         "willdurand/geocoder": "^3.3",
-        "monolog/monolog": "^1.19"
+        "monolog/monolog": "^1.19",
+        "react/http": "^0.5@dev",
+        "phly/react2psr7": "^0.1.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8",
